@@ -41,9 +41,9 @@ public class Bobot : MonoBehaviour {
             left = Input.GetKey("left") || Main.GetAxis("Horizontal") < 0;
             up = Input.GetKey("up") || Main.GetAxis("Vertical") > 0;
             down = Input.GetKey("down") || Main.GetAxis("Vertical") < 0;
-            if (right && ((selected != 0 && x < 30) || x < 25))
+            if (right && ((selected != 0 && x < 30) || x < 20))
                 sprites[selected].transform.Translate(weight, 0, 0);
-            if (left && ((selected != 0 && x > -30) || x > -25))
+            if (left && ((selected != 0 && x > -30) || x > -20))
                 sprites[selected].transform.Translate(-weight, 0, 0);
             if (up && y < 20)
                 sprites[selected].transform.Translate(0, weight, 0);

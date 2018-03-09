@@ -60,7 +60,7 @@ public class TextEnlarger : MonoBehaviour
                 g.fontSize = 80;
                 //int finalscore = 
                 if (!scoreSet) {
-                    Main.score += (int) (Mathf.Log((150 - ((int)Time.time - lastEndTime))) * 1000.0f);
+                    Main.score += (int) (7 * Mathf.Exp(Mathf.Log((150 - ((int)Time.time - lastEndTime)),2)));
                     Main.score += 20; // win bonus
                     Main.reportScore();
                     // PlayerPrefsX.
@@ -76,7 +76,7 @@ public class TextEnlarger : MonoBehaviour
                 b.enabled = false;
                 g.fontSize = 80;
                 if (!scoreSet) {
-                    Main.score += (int) (Mathf.Log((150 - ((int)Time.time - lastEndTime))) * 1000.0f);
+                    Main.score += (int)(7 * Mathf.Exp(Mathf.Log((150 - ((int)Time.time - lastEndTime)), 2)));
                     Main.reportScore();
                     scoreSet = true;
                 }
